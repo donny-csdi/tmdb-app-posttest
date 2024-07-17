@@ -13,6 +13,7 @@ export default function Index() {
   useEffect(() => {
     const favorites: IMovie[] =
       getLocalStorage(LocalStorageKey.Favorites) ?? [];
+    console.log(favorites);
     setDataMovie(favorites);
   }, []);
 

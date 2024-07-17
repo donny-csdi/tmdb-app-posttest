@@ -12,6 +12,7 @@ interface ExploreMovieProps {
 }
 
 const ExploreMovie = ({ movie, title }: ExploreMovieProps) => {
+  console.log(movie);
   const { inView, ref } = useInView();
   const [nextPage, setNextPage] = useState<number>(2); // Start with page 2 if the initial data is page 1
   const [isLoading, setIsLoading] = useState(false);
@@ -33,7 +34,6 @@ const ExploreMovie = ({ movie, title }: ExploreMovieProps) => {
   useEffect(() => {
     if (inView && !isLoading) {
       setIsLoading(true);
-
       fetchMoreData();
     }
   }, [inView]);

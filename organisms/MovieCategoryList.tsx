@@ -13,6 +13,7 @@ interface MovieCategoryListProps {
 }
 
 const MovieCategoryList = ({ dataMovie, title }: MovieCategoryListProps) => {
+  console.log(dataMovie);
   return (
     <>
       <Seo
