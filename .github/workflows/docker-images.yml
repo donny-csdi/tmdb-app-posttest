@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Prepare Environment
+      - name: Prepare Environment
         run: |
           touch .env.local
           echo "NEXT_PUBLIC_TMDB_API_KEY = ${{ secrets.NEXT_PUBLIC_TMDB_API_KEY }}" >> .env.local
