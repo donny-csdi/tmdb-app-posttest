@@ -28,3 +28,5 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/tmdb-app
+          build-args: |
+            NEXT_PUBLIC_TMDB_API_KEY = ${{ secrets.NEXT_PUBLIC_TMDB_API_KEY }}
