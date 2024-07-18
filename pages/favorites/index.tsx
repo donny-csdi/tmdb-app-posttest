@@ -4,6 +4,7 @@ import { IMovie } from "@/types/MovieList";
 import { LocalStorageKey } from "@/utils/enum";
 import { getLocalStorage } from "@/utils/localstorageHandler";
 import MovieCategoryList from "@/organisms/MovieCategoryList";
+import MovieCategoryListFav from "@/organisms/MovieFavorite";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,5 +18,5 @@ export default function Index() {
     setDataMovie(favorites);
   }, []);
 
-  return <MovieCategoryList dataMovie={dataMovie} title="Favorites" />;
+  return <MovieCategoryListFav dataMovie={dataMovie} title="Favorites" />;
 }
