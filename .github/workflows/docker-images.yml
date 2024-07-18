@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Prepare Environment
+        run: |
+          touch .env.local
+          echo "NEXT_PUBLIC_API_KEY = ${{ secrets.NEXT_PUBLIC_API_KEY }}" >> .env.local
+          
       - name: Checkout Repository
         uses: actions/checkout@v2
 
